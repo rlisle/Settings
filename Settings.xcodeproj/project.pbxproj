@@ -10,6 +10,11 @@
 		E4CBE5B31F07ED5500C8B1E2 /* Settings.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E4CBE5A91F07ED5500C8B1E2 /* Settings.framework */; };
 		E4CBE5B81F07ED5500C8B1E2 /* SettingsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE5B71F07ED5500C8B1E2 /* SettingsTests.swift */; };
 		E4CBE5BA1F07ED5500C8B1E2 /* Settings.h in Headers */ = {isa = PBXBuildFile; fileRef = E4CBE5AC1F07ED5500C8B1E2 /* Settings.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4CBE5C41F07EDED00C8B1E2 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE5C31F07EDED00C8B1E2 /* Settings.swift */; };
+		E4CBE5C81F07F0CA00C8B1E2 /* UserDefaultsSettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE5C71F07F0CA00C8B1E2 /* UserDefaultsSettingsStore.swift */; };
+		E4CBE5CA1F07F11500C8B1E2 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE5C91F07F11500C8B1E2 /* SettingsStore.swift */; };
+		E4CBE5CC1F08248700C8B1E2 /* UserDefaultsSettingsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE5CB1F08248700C8B1E2 /* UserDefaultsSettingsStoreTests.swift */; };
+		E4CBE5CE1F09128300C8B1E2 /* MockSettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE5CD1F09128300C8B1E2 /* MockSettingsStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		E4CBE5B21F07ED5500C8B1E2 /* SettingsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SettingsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4CBE5B71F07ED5500C8B1E2 /* SettingsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTests.swift; sourceTree = "<group>"; };
 		E4CBE5B91F07ED5500C8B1E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E4CBE5C31F07EDED00C8B1E2 /* Settings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		E4CBE5C71F07F0CA00C8B1E2 /* UserDefaultsSettingsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsSettingsStore.swift; sourceTree = "<group>"; };
+		E4CBE5C91F07F11500C8B1E2 /* SettingsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		E4CBE5CB1F08248700C8B1E2 /* UserDefaultsSettingsStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsSettingsStoreTests.swift; sourceTree = "<group>"; };
+		E4CBE5CD1F09128300C8B1E2 /* MockSettingsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSettingsStore.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +81,11 @@
 		E4CBE5AB1F07ED5500C8B1E2 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				E4CBE5C31F07EDED00C8B1E2 /* Settings.swift */,
 				E4CBE5AC1F07ED5500C8B1E2 /* Settings.h */,
 				E4CBE5AD1F07ED5500C8B1E2 /* Info.plist */,
+				E4CBE5C71F07F0CA00C8B1E2 /* UserDefaultsSettingsStore.swift */,
+				E4CBE5C91F07F11500C8B1E2 /* SettingsStore.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -82,6 +95,8 @@
 			children = (
 				E4CBE5B71F07ED5500C8B1E2 /* SettingsTests.swift */,
 				E4CBE5B91F07ED5500C8B1E2 /* Info.plist */,
+				E4CBE5CB1F08248700C8B1E2 /* UserDefaultsSettingsStoreTests.swift */,
+				E4CBE5CD1F09128300C8B1E2 /* MockSettingsStore.swift */,
 			);
 			path = SettingsTests;
 			sourceTree = "<group>";
@@ -149,6 +164,7 @@
 					E4CBE5A81F07ED5500C8B1E2 = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = 65NFWK9633;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					E4CBE5B11F07ED5500C8B1E2 = {
@@ -198,6 +214,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4CBE5C41F07EDED00C8B1E2 /* Settings.swift in Sources */,
+				E4CBE5CA1F07F11500C8B1E2 /* SettingsStore.swift in Sources */,
+				E4CBE5C81F07F0CA00C8B1E2 /* UserDefaultsSettingsStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,7 +224,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4CBE5CE1F09128300C8B1E2 /* MockSettingsStore.swift in Sources */,
 				E4CBE5B81F07ED5500C8B1E2 /* SettingsTests.swift in Sources */,
+				E4CBE5CC1F08248700C8B1E2 /* UserDefaultsSettingsStoreTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +345,7 @@
 		E4CBE5BE1F07ED5500C8B1E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 65NFWK9633;
@@ -336,6 +358,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.ronlisle.Settings;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -343,6 +366,7 @@
 		E4CBE5BF1F07ED5500C8B1E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 65NFWK9633;
@@ -362,6 +386,7 @@
 		E4CBE5C11F07ED5500C8B1E2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 65NFWK9633;
 				INFOPLIST_FILE = SettingsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -374,6 +399,7 @@
 		E4CBE5C21F07ED5500C8B1E2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = 65NFWK9633;
 				INFOPLIST_FILE = SettingsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

@@ -9,28 +9,121 @@
 import XCTest
 @testable import Settings
 
-class SettingsTests: XCTestCase {
+
+class SettingsTests: XCTestCase
+{
+    let testString = "abcd1234"
     
-    override func setUp() {
+    var settings: Settings!
+    var mockStore: MockSettingsStore!
+    
+    override func setUp()
+    {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
+        mockStore = MockSettingsStore()
+        settings = Settings(store: mockStore)
     }
     
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
+
+    func testThat_settingsInstantiates()
+    {
+        XCTAssertNotNil(settings)
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    
+    func testThat_storeInstantiates()
+    {
+        XCTAssertNotNil(settings.store)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testIsAardvark_returnsFalseIfNotSet()
+    {
+        mockStore.bool = nil
+        XCTAssertNotNil(settings.isTestAardvark)
+        XCTAssertFalse(settings.isTestAardvark)
+    }
+
+    
+    func testIsAardvark_returnsFalse()
+    {
+        mockStore.bool = false
+        XCTAssertFalse(settings.isTestAardvark)
+    }
+
+    
+    func testIsAardvark_returnsTrue()
+    {
+        mockStore.bool = true
+        XCTAssertTrue(settings.isTestAardvark)
+    }
+
+    
+    func testAardvarkInt_returnsCorrectValue()
+    {
+        let testValue = 0x55aa
+        mockStore.intValue = testValue
+        XCTAssertEqual(settings.TestAardvarkInt, testValue)
+    }
+
+    
+    func testAardvarkString_returnsCorrectValue()
+    {
+        let testString = "testing 1,2,3..."
+        mockStore.string = testString
+        XCTAssertEqual(settings.TestAardvarkString, testString)
+    }
+}
+
+// This is an example of how to define settings values
+// Create an extension like this in your product code
+extension Settings
+{
+    var isTestAardvark: Bool
+    {
+        get {
+            if let value = store.getBool(forKey: "TestIsAardvarkKey")
+            {
+                return  value
+            }
+            // Return a default value
+            return false
+        }
+        set {
+            store.set(newValue, forKey: "TestIsAardvarkKey")
         }
     }
     
+    
+    var TestAardvarkInt: Int
+    {
+        get {
+            if let value = store.getInt(forKey: "TestAardvarkIntKey")
+            {
+                return  value
+            }
+            // Return a default value
+            return 0
+        }
+        set {
+            store.set(newValue, forKey: "TestAardvarkIntKey")
+        }
+    }
+    
+    
+    var TestAardvarkString: String
+    {
+        get {
+            if let value = store.getString(forKey: "TestAardvarkStringKey")
+            {
+                return  value
+            }
+            // Return a default value
+            return "Unknown"
+        }
+        set {
+            store.set(newValue, forKey: "TestAardvarkStringKey")
+        }
+    }
 }
