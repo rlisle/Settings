@@ -15,6 +15,8 @@
 		E4CBE5CA1F07F11500C8B1E2 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE5C91F07F11500C8B1E2 /* SettingsStore.swift */; };
 		E4CBE5CC1F08248700C8B1E2 /* UserDefaultsSettingsStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE5CB1F08248700C8B1E2 /* UserDefaultsSettingsStoreTests.swift */; };
 		E4CBE5CE1F09128300C8B1E2 /* MockSettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE5CD1F09128300C8B1E2 /* MockSettingsStore.swift */; };
+		E4CBE5D21F092DB500C8B1E2 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = E4CBE5D01F092DB500C8B1E2 /* LICENSE */; };
+		E4CBE5D31F092DB500C8B1E2 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = E4CBE5D11F092DB500C8B1E2 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,8 @@
 		E4CBE5C91F07F11500C8B1E2 /* SettingsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
 		E4CBE5CB1F08248700C8B1E2 /* UserDefaultsSettingsStoreTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDefaultsSettingsStoreTests.swift; sourceTree = "<group>"; };
 		E4CBE5CD1F09128300C8B1E2 /* MockSettingsStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MockSettingsStore.swift; sourceTree = "<group>"; };
+		E4CBE5D01F092DB500C8B1E2 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		E4CBE5D11F092DB500C8B1E2 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 		E4CBE59F1F07ED5500C8B1E2 = {
 			isa = PBXGroup;
 			children = (
+				E4CBE5D01F092DB500C8B1E2 /* LICENSE */,
+				E4CBE5D11F092DB500C8B1E2 /* README.md */,
 				E4CBE5AB1F07ED5500C8B1E2 /* Settings */,
 				E4CBE5B61F07ED5500C8B1E2 /* SettingsTests */,
 				E4CBE5AA1F07ED5500C8B1E2 /* Products */,
@@ -197,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4CBE5D21F092DB500C8B1E2 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +223,7 @@
 			files = (
 				E4CBE5C41F07EDED00C8B1E2 /* Settings.swift in Sources */,
 				E4CBE5CA1F07F11500C8B1E2 /* SettingsStore.swift in Sources */,
+				E4CBE5D31F092DB500C8B1E2 /* README.md in Sources */,
 				E4CBE5C81F07F0CA00C8B1E2 /* UserDefaultsSettingsStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -428,6 +436,7 @@
 				E4CBE5BF1F07ED5500C8B1E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E4CBE5C01F07ED5500C8B1E2 /* Build configuration list for PBXNativeTarget "SettingsTests" */ = {
 			isa = XCConfigurationList;
@@ -436,6 +445,7 @@
 				E4CBE5C21F07ED5500C8B1E2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
